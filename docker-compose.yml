@@ -1,0 +1,12 @@
+services:
+  rabbitmq:
+    hostname: rabbitmq
+    image: rabbitmq:3.12-management-alpine
+    ports:
+      - 15672:15672
+
+  celery:
+    image: celery:latest
+    build:
+      context: celery/
+
