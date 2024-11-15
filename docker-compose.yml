@@ -9,3 +9,9 @@ services:
     image: celery:latest
     build:
       context: celery/
+    deploy:
+      resources:
+        limits:
+          cpus: '12.0'
+        reservations:
+          cpus: '12.0'
