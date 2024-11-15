@@ -9,4 +9,3 @@ services:
     image: celery:latest
     build:
       context: celery/
-

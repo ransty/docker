@@ -1,5 +1,5 @@
 #!/bin/bash
-celery -A app worker --loglevel=info --concurrency=1 &
+celery -A app worker --loglevel=info --concurrency=4 --uid 65 &
 CELERY_PID=$!
 
 python3 send_task.py &
